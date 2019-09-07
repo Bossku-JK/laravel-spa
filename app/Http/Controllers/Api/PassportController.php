@@ -145,10 +145,10 @@ class PassportController extends Controller
     {
      
         $user = auth()->user();
-      $tokentimeout = DB::table('oauth_access_tokens')->where('user_id','=' , $user->id )->orderBy('created_at','desc')->first();
+        $tokentimeout = DB::table('oauth_access_tokens')->where('user_id','=' , $user->id )->orderBy('created_at','desc')->first();
         $now = carbon::now();
         if ($tokentimeout->expires_at < $now) {
-            return response()->json(['error' => 'token หมดอายุ'], 401);
+            return response()->json(['error' => 'token timeout'], 401);
         }
 // dd($now);
 //get roles

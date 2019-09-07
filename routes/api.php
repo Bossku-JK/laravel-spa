@@ -16,13 +16,13 @@ use Illuminate\Http\Request;
 // Route::post('/register', 'Auth\RegisterController@create');
 Route::post('login', 'Api\PassportController@login');
 Route::post('register', 'Api\PassportController@register');
-
+Route::get('/stitexam', 'nation\StitexamController@index');
 // Route::get('/stitexam', 'nation\StitexamController@index');
 Route::middleware('auth:api')->group(function () {
     
    
     Route::get('/user', 'Api\PassportController@getUser');
-    Route::get('/stitexam', 'nation\StitexamController@index');
+    // Route::get('/stitexam', 'nation\StitexamController@index');
  
     
     Route::get('/stitexam/show/{edu_year}/{id_explace}/{id_level}', 'nation\StitexamController@show');

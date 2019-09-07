@@ -109,13 +109,16 @@
      
      
       
-  
+
     </div>
 
-    <button @click="addFind">new</button>
+ 
     <!-- <pre>{{ $data.stit  }}</pre> -->
     </div>
+       <button @click="addFind">new</button>
+
   </div>
+
 </template>
 
 <script>

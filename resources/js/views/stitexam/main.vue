@@ -5,7 +5,7 @@
                 <div class="card card-default">
                     <div class="card-header">Stitexam</div>
 
-                    <div class="card-body">
+                    <div class="card-body" style="padding:10px;">
                         <router-view></router-view>
                     </div>
                 </div>

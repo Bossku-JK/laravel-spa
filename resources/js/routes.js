@@ -61,7 +61,7 @@ const router = new VueRouter ({
         {
             path: '/stitexam',
             component: stitexamMain,
-            meta: { requiresAuth: true},
+            meta: { requiresAuth: false},
      
             children: [
                 {
